@@ -16,5 +16,9 @@ urlpatterns = [
     path('bugs/', views.bug_list, name='bugs_page'),
     path('bugs/<int:bug_id>/', views.BugDetailView.as_view(), name='bug_detail_page'),
     path('features/', views.feature_list, name='features_page'),
-    path('features/<int:feature_id>/', views.FeatureRequestDetailView.as_view(), name='feature_detail_page')
+    path('features/<int:feature_id>/', views.FeatureRequestDetailView.as_view(), name='feature_detail_page'),
+
+    #forms
+    path('bugs/new/', views.add_bug_report, name='create_bug_report'),
+    path('features/new/', views.add_feature_request, name='create_feature_request'),
 ]
